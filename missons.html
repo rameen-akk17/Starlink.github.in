@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StarLink Missions</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  
+  <!-- Logo linking to home page -->
+  <div class="logo">
+    <a href="index.html">
+      <img src="SL.png" alt="starlink logo" />
+    </a>
+  </div>
+  
+  <!-- Navigation bar -->
+  <nav class="nav-bar">
+    <img
+      class="menu"
+      src="Menu icon.svg"
+      alt="menu icon"
+      onclick="toggleMenu()"
+    />
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="SigninPortals.html">Sign In</a></li>
+      <li><a href="Help.html">Help</a></li>
+      <li><a href="map.html">US Headquarters</a></li>
+      <li><a href="Careers.html">Careers</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Mission tagline -->
+  <div class="moto">
+    <h2>Linking stars across the galaxy</h2>
+  </div>
+  
+  <!-- Main mission image -->
+  <div style="text-align: center; margin-top: 30px;">
+    <img
+      src="missions.jpg"
+      alt="Missions Overview"
+      style="max-width: 90%; height: auto; border-radius: 10px;"
+    />
+  </div>
+  
+  <!-- Mission description -->
+  <p>
+    We’re redefining what it means to travel.<br />
+    Our mission is to make spaceflight not just a dream—but a destination.<br />
+    From commercial access to orbit to future journeys across planets, we’re building the path to a universe that’s open, accessible, and within reach for all.<br />
+    The future doesn’t wait. Neither do we.
+  </p>
+  
+  <!-- Images and descriptions of engines -->
+  <div class="image-row">
+    <div class="image-box">
+      <img src="missionsbg.png" alt="BE-3PM Engine" />
+      <p>
+        At full power, BE-3PM generates up to 110,000 lbf (490 kN) thrust at Launch Site One (109,000 lbf / 485 kN at sea level). When returning to Earth, it uniquely throttles down to 20,000 lbf (90 kN), enabling a gentle vertical landing on the pad.<br /><br />
+        Like the Space Shuttle’s main engines, BE-3PM uses high-performing liquid oxygen and liquid hydrogen. BE-3PM is designed for operational reusability with minimal maintenance between flights. Our approach increases availability while lowering operating costs.
+      </p>
+    </div>
+    <div class="image-box">
+      <img src="item2.webp" alt="BE-4 Engine" />
+      <p>
+        We chose LNG because it is highly efficient, low cost and widely available. Unlike kerosene, LNG can be used to self-pressurize its tank. Known as autogenous repressurization, this eliminates the need for costly and complex systems that draw on Earth’s scarce helium reserves.<br /><br />
+        BE-4 was designed from the beginning to be a medium-performing version of a high-performance architecture. It’s a conscious design choice made to lower development risk while meeting performance, schedule and reusability requirements.
+      </p>
+    </div>
+    <div class="image-box">
+      <img src="item3.webp" alt="BE-7 Engine" />
+      <p>
+        BE-7 is a high-performance, dual-expander cycle engine. The engine generates 10,000 lbf (44.5 kN) of vacuum thrust in space and is capable of deep throttling.<br /><br />
+        BE-7 engines are being vacuum cell tested in a simulated space-like environment in the Air Force Research Laboratory at Edwards Air Force Base in California to prepare for lunar missions.
+      </p>
+    </div>
+  </div>
+  
+  <!-- GSAP animation libraries -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  
+  <!-- Custom animations -->
+  <script src="animations.js"></script>
+</body>
+</html>

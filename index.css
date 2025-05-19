@@ -1,0 +1,434 @@
+
+/* removes default spacing around the page and sets fonts + bg color */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+/* styles all <p> tags with center text and light color */
+p {
+  text-align: center;
+  font-size: 18px;
+  color: rgb(251, 238, 238);
+  font-family: 'D-DIN-Bold', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+
+/* === headers=== */
+
+/* makes the header flexible, spaced out and wrapped on small screens */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2e2e2e;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+/* styles the logo image */
+.logo img {
+  height: 200px;
+  width: auto;
+}
+
+/* styles the text beside/under the logo */
+.header-text {
+  flex-grow: 1;
+  text-align: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* styles the main heading in header */
+.header-text h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* styles the intro text */
+.intro {
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+
+/* === nav === */
+
+/* fixes the navbar to top right, black bg, with spacing */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2); /* semi-transparent black */
+  backdrop-filter: blur(5px);    /* optional for frosted glass effect */
+  padding: 20px 40px;
+  z-index: 999;
+}
+
+/* removes bullet points and spaces nav items out */
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+/* styles each nav link */
+.nav-bar li a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+
+/* adds hover effect for nav links */
+.nav-bar li a:hover {
+  color: #999;
+}
+
+/* styles the hamburger/menu icon */
+.nav-bar img.menu {
+  height: 20px;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+
+/* === resp header=== */
+
+/* on small screens, stack header vertically */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-text {
+    margin-top: 1rem;
+  }
+}
+
+
+/* === Ccontainers  === */
+
+/* wraps multiple contact boxes and centers them */
+.container-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 3rem auto;
+  gap: 2rem;
+  max-width: 1000px;
+}
+
+/* single contact card with bg, padding, shadow */
+.contact-box {
+  background-color: #3a3a3a;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* title inside contact card */
+.contact-box h2 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+/* paragraph inside contact card */
+.contact-box p {
+  font-size: 1rem;
+  color: #dcdcdc;
+}
+
+/* main section container for layout split */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* left side text area */
+.text {
+  flex: 1;
+  padding-right: 40px;
+}
+
+/* heading inside text area */
+.text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+/* paragraph inside text */
+.text p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+/* video section beside the text */
+.video {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+}
+
+
+/* === images and stacks=== */
+
+/* vertical stack of images */
+.image-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 20px;
+}
+
+/* makes all images responsive */
+.image-stack img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+}
+
+/* fixed video background behind everything */
+.video-two {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  
+}
+
+
+/* styles the <video> tag inside .video-two */
+.video-two video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;  
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover; /* fills area but may crop */
+}
+
+
+/* === video bgs === */
+
+/* full-page container for background video */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* full-screen video centered and scaled */
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: contain; /* keeps video fully visible */
+}
+
+
+/* === overlay === */
+
+/* content section that sits over video bg */
+.content {
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent bg */
+  padding-top: 100px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+
+/* === mission and suit sec === */
+
+/* wrapper for mission and suit section */
+.suit-sec,
+.mission {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+/* images inside these sections */
+.suit-sec img,
+.mission img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* big text button/overlay in the center of image */
+.suit-link,
+.mission-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  backdrop-filter: blur(5px); /* glass effect */
+}
+
+/* make links inside mission/suit overlay white and clean */
+.suit-link a,
+.mission-link a {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* === motto === */
+
+/* tagline style under hero section or somewhere */
+.moto {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 24px;
+  color: rgb(253, 248, 248);
+  font-family: 'D-DIN-Bold', Arial, sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+
+/* === footer=== */
+
+/* footer bg + center text */
+footer {
+  background-color: #555;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+
+/* === empty div === */
+
+/* creates empty vertical space */
+.spacer {
+  height: 40vh;
+}
+
+
+/* === box img === */
+
+/* wrapper to animate boxes from below */
+.box {
+  width: 100%;
+  text-align: center;
+  opacity: 1;
+  transform: translateY(100px);
+}
+
+/* styles images inside the box section */
+.box img {
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+
+/* === maps sec === */
+
+/* flex container for iframe + socials */
+.map-social-container {
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+  justify-content: center;
+  align-items: center; /* center horizontally */
+  margin-top: 40px;
+  gap: 20px; /* spacing between heading, map, and socials */
+}
+/* iframe box stays same size */
+.iframe {
+  flex-shrink: 0;
+}
+.socials {
+  display: flex;
+  gap: 30px; /* space between each  item */
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 60px; /* bigger size */
+  height: 60px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+}
+
+.socials h3 {
+  margin: 0 0 0 8px; /* margin-left between icon and text */
+  font-size: 18px;
+  color: #ede8e8; /* adjust color based on background */
+  align-self: center;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+.image-box {
+  max-width: 300px;
+  text-align: center;
+  color: white;
+}
+.image-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}

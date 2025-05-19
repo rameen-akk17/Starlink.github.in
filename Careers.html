@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>careers</title>
+  <style>
+    /* remove margin/padding */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: arial, sans-serif;
+    }
+
+    /* video background container fixed to screen */
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1; /* puts video behind all other content */
+      overflow: hidden;
+    }
+
+    /* centers and scales the video */
+    .video-container video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    /* main content over the video */
+    .content {
+      position: relative;
+      color: white;
+      text-align: center;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.5); /* dark overlay for readability */
+      padding-top: 100px;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    /* logo top-left corner */
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 1;
+    }
+
+    /* job listings stacked vertically */
+    .jobs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    /* each job card */
+    .job {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 300px;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: rgba(49, 47, 47, 0.1); /* subtle transparent card */
+    }
+
+    /* apply button inside each job */
+    .job button {
+      background-color: #95d1db;
+      color: #0b0a0a;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    /* navigation bar fixed to top */
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 20px 40px;
+      z-index: 999; /* on top of everything */
+    }
+
+    /* nav items */
+    .nav-bar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* nav links */
+    .nav-bar li a {
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    /* hover effect for nav links */
+    .nav-bar li a:hover {
+      color: #999;
+    }
+
+    /* hamburger menu icon on the left */
+    .nav-bar img.menu {
+      height: 20px;
+      margin-right: auto;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- nav bar with menu + links -->
+  <nav class="nav-bar">
+    <img class="menu" src="Menu icon.svg" alt="menu icon" />
+    <ul>
+      <li>
+        <a href="#">
+          <img src="Lanuage icon.svg" alt="lang icon" style="height:12px; vertical-align:middle;" />
+          eng
+        </a>
+      </li>
+      <li><a href="index.html">home</a></li>
+      <li><a href="SigninPortals.html">sign in</a></li>
+      <li><a href="Help.html">help</a></li>
+      <li><a href="map.html">us headquarters</a></li>
+      <li><a href="Careers.html">careers</a></li>
+    </ul>
+  </nav>
+
+  <!-- logo link to home -->
+  <div class="logo">
+    <a href="index.html">
+      <img src="SL.png" alt="starlink logo" />
+    </a>
+  </div>
+
+  <!-- background video section -->
+  <div class="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="EarthVideo.mp4" type="video/mp4" />
+      your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- content overlay with job cards -->
+  <div class="content">
+    <h1>Vacancies</h1>
+
+    <div class="jobs">
+
+      <!-- job 1 -->
+      <div class="job">
+        <div>
+          <span>orbital mechanics analyst</span>
+          <p style="font-size: 14px; color: #ccc;">
+            model and analyze spacecraft trajectories and orbital paths for mission planning.
+          </p>
+        </div>
+        <button>apply</button>
+      </div>
+
+      <!-- job 2 -->
+      <div class="job">
+        <div>
+          <span>zero-gravity robotics engineer</span>
+          <p style="font-size: 14px; color: #ccc;">
+            design robotic systems optimized for operation in microgravity environments.
+          </p>
+        </div>
+        <button>apply</button>
+      </div>
+
+      <!-- job 3 -->
+      <div class="job">
+        <div>
+          <span>satellite data specialist</span>
+          <p style="font-size: 14px; color: #ccc;">
+            interpret, process, and manage large volumes of satellite-collected data.
+          </p>
+        </div>
+        <button>apply</button>
+      </div>
+
+      <!-- job 4 -->
+      <div class="job">
+        <div>
+          <span>deep space communications lead</span>
+          <p style="font-size: 14px; color: #ccc;">
+            develop and maintain communication systems for interplanetary missions.
+          </p>
+        </div>
+        <button>apply</button>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

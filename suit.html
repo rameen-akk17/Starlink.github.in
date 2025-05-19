@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Space Suit</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'D-DIN-Bold', Arial, sans-serif;
+      background: #000;
+      color: white;
+    }
+
+    .nav-bar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background: #000;
+      padding: 20px 40px;
+      z-index: 999;
+    }
+
+    .nav-bar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-bar li a {
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    .nav-bar li a:hover {
+      color: #999;
+    }
+
+    .nav-bar img.menu {
+      height: 20px;
+      margin-right: auto;
+      cursor: pointer;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100vh;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    .text {
+      flex: 1;
+      padding-right: 40px;
+    }
+
+    .text h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .text p {
+      font-size: 20px;
+      line-height: 1.5;
+      color: #ccc;
+    }
+
+    .video {
+      flex: 1;
+      width: 100%;
+      height: auto;
+      max-height: 100vh;
+    }
+
+    .image-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 60px 20px;
+    }
+
+    .image-stack img {
+      width: 100%;
+      max-width: 1000px;
+      height: auto;
+      display: block;
+    }
+
+    .logo {
+      height: 100px;
+      width: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <a href="index.html">
+      <img src="SL.png" alt="logo" />
+    </a>
+  </div>
+
+  <nav class="nav-bar">
+    <img class="menu" src="Menu icon.svg" alt="menu icon" onclick="toggleMenu()" />
+    <ul>
+      <li><a href="index.html">home</a></li>
+      <li><a href="SigninPortals.html">Sign In</a></li>
+      <li><a href="Help.html">Help</a></li>
+      <li><a href="map.html">US Headquarters</a></li>
+      <li><a href="Careers.html">Careers</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="text">
+      <h1>Redefining the Suit</h1>
+      <p>
+        Engineered for elegance and survival, the new generation space suit blends function with vision. 
+        Designed not just to withstand the vacuum of space but to move like it’s part of you.
+      </p>
+    </div>
+    <div class="video">
+      <video width="100%" autoplay muted loop>
+        <source src="https://polarisprogram.com/wp-content/uploads/2024/05/SPACEX_01_EVA_SuitSpin_Callouts_Detail_16x9_02.mp4-comp-27.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="image-stack">
+    <img src="90.avif" alt="Suit 2" />
+    <div class="spacer"></div>
+
+    <img src="suit3.webp" alt="Suit 3" />
+    <div class="spacer"></div>
+
+    <img src="90.avif" alt="Suit 2" />
+    <div class="spacer"></div>
+  </div>
+
+  <script src="animations.js"></script>
+</body>
+</html>

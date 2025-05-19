@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Starlink</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <!-- navigation bar at the top of the page -->
+  <nav class="nav-bar">
+
+    <!-- menu icon for mobile or toggle navigation -->
+    <img
+      class="menu"
+      src="Menu icon.svg"
+      alt="menu icon"
+      onclick="toggleMenu()"
+    />
+
+    <!-- unordered list to hold all the navigation links -->
+    <ul>
+      <!-- language option with a small icon and text -->
+      <li>
+        <a href="#">
+          <img
+            src="Lanuage icon.svg"
+            alt="lang icon"
+            style="height:12px; vertical-align:middle;"
+          />
+          ENG
+        </a>
+      </li>
+      <li><a href="SigninPortals.html">Sign In</a></li>
+      <li><a href="Help.html">Help</a></li>
+      <li><a href="map.html">US Headquarters</a></li>
+      <li><a href="Careers.html">Careers</a></li>
+    </ul>
+  </nav>
+
+  <!-- section with a fullscreen looping video (rocket launch maybe) -->
+  <div class="video-two">
+    <video autoplay muted loop playsinline>
+      <source src="rocket.mp4" type="video/mp4" />
+      <!-- this text shows if the browser doesn't support video tag -->
+      your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- empty div for spacing between sections -->
+  <div class="spacer"></div>
+
+  <!-- starlink logo in its own box -->
+  <div class="box">
+    <img src="SL.png" alt="starlink logo" />
+  </div>
+
+  <!-- another spacer to separate sections -->
+  <div class="spacer"></div>
+
+  <!-- section showing a new astronaut suit -->
+  <div class="suit-sec">
+    <!-- image of the astronaut suit -->
+    <img src="suit.jpg" alt="astronaut in suit" />
+
+    <!-- link that takes user to suit details page -->
+    <div class="suit-link">
+      <a href="suit.html">The next generation of Space suits</a>
+    </div>
+  </div>
+
+  <!-- section about space missions -->
+  <div class="mission">
+    <!-- image related to space (like jupiter) -->
+    <img src="4k.png" alt="picture of jupitar" />
+
+    <!-- link that takes user to the missions page -->
+    <div class="mission-link">
+      <a href="missons.html">Missions</a>
+    </div>
+  </div>
+
+  <!-- gsap animation library for scroll effects and other transitions -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+  <!-- your custom animations written in js -->
+  <script src="animations.js"></script>
+</body>
+</html>
